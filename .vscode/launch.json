@@ -12,6 +12,16 @@
             "console":"internalConsole",
             "justMyCode": false,
             "internalConsoleOptions": "openOnSessionStart",
+        },
+
+        {
+            "name": "Sub-module",
+            "type": "python",
+            "request": "launch",
+            "program": "bases-ganancias-2022/main.py",
+            "console":"internalConsole",
+            "justMyCode": false,
+            "internalConsoleOptions": "openOnSessionStart",
         }
     ]
 }
