@@ -1,12 +1,14 @@
 # Importación y carga de la CWTR
-import pandas as pd
-CWTR = pd.read_parquet('./bases-ganancias-2022/cwtr.parquet.brotli')
+from data import CWTR
 
 class Empleado:
     def __init__(self, legajo) -> None:
         self.legajo = legajo
         self.nombre = CWTR[CWTR['Nº pers.'].eq(legajo)].iloc[0].at['Apellido Nombre']
-        self.mejor_sueldo = {}
+        # self.mejor_sueldo = {}
+    
+    def __str__(self) -> str:
+        return f"< {type(self).__name__} - {self.legajo} - {self.nombre} >"
 
 class NominasCWTR:
     def __init__(self, legajo, mes) -> None:
@@ -67,19 +69,26 @@ class LiquidacionMensualEmpleado:
 
 
 # _______________________________________________________________
-LEGAJO_PAU = 6066825
-LEGAJO_LUDU = 6002385
+# LEGAJO_PAU = 6066825
+# LEGAJO_LUDU = 6002385
 
-empleado = Empleado(LEGAJO_PAU)
-liq = LiquidacionMensualEmpleado(empleado, 1)
+# empleado = Empleado(LEGAJO_PAU)
+# liq = LiquidacionMensualEmpleado(empleado, 1)
 
-print(empleado.legajo, empleado.nombre)
-print('Mes: ', liq.mes)
-print('Nómina total de haberes (/111):', liq.nominas['/111'])
-print('Nominas:')
-print(liq.nominas.importes)
+# print(empleado.legajo, empleado.nombre)
+# print('Mes: ', liq.mes)
+# print('Nómina total de haberes (/111):', liq.nominas['/111'])
+# print('Nominas:')
+# print(liq.nominas.importes)
 
-liq.logicaLiquidacion()
-print(liq.baseBruta)
-print(liq.conceptosExentos)
-print(liq.gananciaImponible)
+# liq.logicaLiquidacion()
+# print(liq.baseBruta)
+# print(liq.conceptosExentos)
+# print(liq.gananciaImponible)
+
+
+# import paramconceptos as pc
+
+# conceptos = pc.ParamConceptos()
+
+# print(conceptos.prorrateables)
