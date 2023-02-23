@@ -1,6 +1,6 @@
 # Importación y carga de la CWTR
 import pandas as pd
-CWTR = pd.read_parquet('./cwtr.parquet.brotli')
+CWTR = pd.read_parquet('./bases-ganancias-2022/cwtr.parquet.brotli')
 
 class Empleado:
     def __init__(self, legajo) -> None:
@@ -15,7 +15,7 @@ class NominasCWTR:
         self.cargar_nominas()
 
     def __getitem__(self, key):
-        return self.importes[key]
+        return self.importes.get(key, 0)
 
     def cargar_nominas(self):
         filtro = CWTR['Nº pers.'].eq(self.legajo) & CWTR['Mes'].eq(self.mes)
@@ -35,13 +35,42 @@ class LiquidacionMensualEmpleado:
         self.nominas = NominasCWTR(empleado.legajo, mes)
 
     def logicaLiquidacion(self):
-        pass
+
+        # Paso 1: Determinación de Ganancia Imponible
+        self.gananciaImponible = 0
+
+        # Paso 1.1: Base bruta
+        self.gananciaImponible += self.determinacionBaseBruta()
+
+        # Paso 1.2: Conceptos Exentos
+        self.gananciaImponible -= self.determinacionConceptosExentos()
+
+    def determinacionBaseBruta(self):
+        self.baseBruta = 0
+        self.baseBruta += self.nominas['/111'] # Total Haberes con aportes
+        self.baseBruta += self.nominas['/124'] # Haberes no remun.SIJP
+
+        return self.baseBruta
+
+    def determinacionConceptosExentos(self):
+        self.conceptosExentos = 0
+        self.conceptosExentos += self.nominas['409A'] # Reintegro gastos HO
+        self.conceptosExentos += self.nominas['/146'] # Rem. Hora Ext. Exenta
+        self.conceptosExentos += self.nominas['1239'] # Enfermedad Profesional
+        self.conceptosExentos += self.nominas['1235'] # Accidente-Primeros 10d
+        self.conceptosExentos += self.nominas['1236'] # Accidente - Mas 10d
+        self.conceptosExentos += self.nominas['1237'] # Accid. In Itiner-Prim.1
+        self.conceptosExentos += self.nominas['1238'] # Accid. In Itiner-Mas 10
+        self.conceptosExentos += self.nominas['1262'] # Lic.por enf.COVID19
+
+        return self.conceptosExentos
+
 
 # _______________________________________________________________
 LEGAJO_PAU = 6066825
 LEGAJO_LUDU = 6002385
 
-empleado = Empleado(LEGAJO_LUDU)
+empleado = Empleado(LEGAJO_PAU)
 liq = LiquidacionMensualEmpleado(empleado, 1)
 
 print(empleado.legajo, empleado.nombre)
@@ -49,3 +78,8 @@ print('Mes: ', liq.mes)
 print('Nómina total de haberes (/111):', liq.nominas['/111'])
 print('Nominas:')
 print(liq.nominas.importes)
+
+liq.logicaLiquidacion()
+print(liq.baseBruta)
+print(liq.conceptosExentos)
+print(liq.gananciaImponible)
