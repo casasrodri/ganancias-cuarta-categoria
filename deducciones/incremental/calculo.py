@@ -3,10 +3,26 @@ sys.path.append('..')
 
 # Creación del dataframe de trabajo para las deducciones incrementales
 import pandas as pd
-from data import CWTR_SUM
+from data import CWTR_SUM, EMPLEADOS
 
 # Se crea una copia del df
 df = CWTR_SUM.copy()
+
+# Se agregan valores vacíos
+df_vacio = []
+
+for empleado in EMPLEADOS:
+    for mes in range(1,13):
+        df_vacio.append({
+            'legajo': empleado,
+            'CCn': 'VACIO',
+            'mes': mes,
+            'importe': 0.00
+        })
+
+df_vacio = pd.DataFrame.from_records(df_vacio)
+
+df = pd.concat([df_vacio, CWTR_SUM])
 
 # Se importan la parametrización de los conceptos:
 from parametrizacion.conceptos import ParamConceptos
@@ -56,11 +72,8 @@ class DeduccionEspecial:
         return round(valor, 2)
 
     @staticmethod
-    def obtener_tramo(empleado, mes):
+    def obtener_base_para_tramos(empleado, mes, norma):
         legajo = empleado.legajo
-
-        # Se determina la norma aplicable
-        norma = DeduccionEspecial.norma_aplicable(mes)
 
         # Se filtra la remuneración del mes:
         rem_bruta_mes = DeduccionEspecial.obtener_rem_mes(legajo, mes)
@@ -69,7 +82,13 @@ class DeduccionEspecial:
         rem_promedio = DeduccionEspecial.obtener_promedio_rem(legajo, mes, norma)
 
         # Se determina la mínima
-        base = min(rem_bruta_mes, rem_promedio)
+        return min(rem_bruta_mes, rem_promedio)
+
+    @staticmethod
+    def obtener_tramo(empleado, mes):
+        # Se determina la norma aplicable
+        norma = DeduccionEspecial.norma_aplicable(mes)
+        base = DeduccionEspecial.obtener_base_para_tramos(empleado, mes, norma)
     
         # Determinación tramo:
         if base <= norma['tope1']:

@@ -10,7 +10,6 @@ class Prorrateos:
         self.generar_data()
 
     def generar_data(self):
-      self.data = pd.DataFrame(columns=['legajo', 'CCn', 'nombre', 'importe', 'mes', 'mes_pago', 'origen'])
       self._records = []
 
       from data import CWTR
