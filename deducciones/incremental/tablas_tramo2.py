@@ -1,8 +1,8 @@
-import pandas as pd
+from helpers.bases import tabla
 
 class TablasTramo2:
     def __init__(self) -> None:
-        self.data = pd.read_excel('./bases-ganancias-2022/tablas_afip_tramo2.paquet')
+        self.data = tabla('tablas_afip_tramo2')
 
     def deduccion(self, mes, sueldo):
         df = self.data

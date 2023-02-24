@@ -1,6 +1,6 @@
-import pandas as pd
+from helpers.bases import tabla
 
-CWTR = pd.read_parquet('./bases-ganancias-2022/cwtr.parquet.brotli')
+CWTR = tabla('cwtr')
 CWTR_SUM = CWTR.groupby(['Nº pers.','CC-n.','Mes'])['Importe'].sum().reset_index().rename(columns={"Nº pers.": "legajo", "CC-n.": "CCn", "Mes": "mes", "Importe": "importe"})
-EMPLEADOS = CWTR_SUM['legajo'].unique().tolist()
+DOTACION = tabla('dotacion')
 

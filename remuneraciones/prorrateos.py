@@ -1,11 +1,11 @@
-from os.path import exists
-import pandas as pd
+from helpers.bases import tabla, existe_tabla
+
 BASE_PRORRATEOS = 'bases-ganancias-2022/prorrateos.parquet.brotli'
 
 class Prorrateos:
     def __init__(self) -> None:
-      if exists(BASE_PRORRATEOS):
-        self.data = pd.read_parquet(BASE_PRORRATEOS)
+      if existe_tabla('prorrateos'):
+        self.data = tabla('prorrateos')
       else:
         self.generar_data()
 

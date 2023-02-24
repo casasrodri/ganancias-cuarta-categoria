@@ -1,10 +1,10 @@
 # Importación y carga de la CWTR
-from data import CWTR
+from data import CWTR, DOTACION
 
 class Empleado:
     def __init__(self, legajo) -> None:
         self.legajo = legajo
-        self.nombre = CWTR[CWTR['Nº pers.'].eq(legajo)].iloc[0].at['Apellido Nombre']
+        self.nombre = DOTACION[DOTACION['legajo'].eq(legajo)].iloc[0].at['nombre']
         # self.mejor_sueldo = {}
     
     def __str__(self) -> str:
