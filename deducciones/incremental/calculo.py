@@ -3,7 +3,7 @@ sys.path.append('..')
 
 # Creación del dataframe de trabajo para las deducciones incrementales
 import pandas as pd
-from data import CWTR_SUM, EMPLEADOS
+from data import CWTR_SUM, DOTACION
 
 # Se crea una copia del df
 df = CWTR_SUM.copy()
@@ -11,7 +11,7 @@ df = CWTR_SUM.copy()
 # Se agregan valores vacíos
 df_vacio = []
 
-for empleado in EMPLEADOS:
+for empleado in DOTACION['legajo'].tolist():
     for mes in range(1,13):
         df_vacio.append({
             'legajo': empleado,
@@ -30,12 +30,12 @@ conceptos = ParamConceptos()
 
 # Se determinan los valores individuales a sumar y restar para obtener la REMUN. BRUTA MENSUAL:
 import numpy as np
-df['Suma'] = np.where(df['CCn'].isin(conceptos.listar('DeducIncrem', '+')), df['importe'], 0)
-df['Resta'] = np.where(df['CCn'].isin(conceptos.listar('DeducIncrem', '-')), df['importe'], 0)
-df['BaseDeducIncrem'] = df['Suma'] - df['Resta']
+df['Suma'] = np.where(df['CCn'].isin(conceptos.listar('BaseTramos', '+')), df['importe'], 0)
+df['Resta'] = np.where(df['CCn'].isin(conceptos.listar('BaseTramos', '-')), df['importe'], 0)
+df['BaseTramos'] = df['Suma'] - df['Resta']
 
 # Se crea un df que contenga sumado por legajo y por mes, la REMUN. BRUTA MENSUAL:
-BASES_DEDUC_INCREM = df.groupby(['legajo', 'mes'])['BaseDeducIncrem'].sum().reset_index()
+BASES_DEDUC_INCREM = df.groupby(['legajo', 'mes'])['BaseTramos'].sum().reset_index()
 
 # Se declaran los tramos según la normativa en cada epoca:
 AFIP_DEDUC_INCREM = [
@@ -56,7 +56,7 @@ class DeduccionEspecial:
     def obtener_rem_mes(legajo, mes):
         filtro =    BASES_DEDUC_INCREM['legajo'].eq(legajo) & \
                     BASES_DEDUC_INCREM['mes'].eq(mes)
-        return BASES_DEDUC_INCREM[filtro].iloc[0].at['BaseDeducIncrem']
+        return BASES_DEDUC_INCREM[filtro].iloc[0].at['BaseTramos']
     
     @staticmethod
     def obtener_promedio_rem(legajo, mes, norma):
@@ -67,8 +67,8 @@ class DeduccionEspecial:
                             BASES_DEDUC_INCREM['mes'].le(filt_max)
 
         filtrado_fechas = BASES_DEDUC_INCREM[filtro_periodos]
-        promediado = filtrado_fechas.groupby(['legajo'])['BaseDeducIncrem'].mean().reset_index()
-        valor = promediado[promediado['legajo'].eq(legajo)].iloc[0].at['BaseDeducIncrem']
+        promediado = filtrado_fechas.groupby(['legajo'])['BaseTramos'].mean().reset_index()
+        valor = promediado[promediado['legajo'].eq(legajo)].iloc[0].at['BaseTramos']
         return round(valor, 2)
 
     @staticmethod
