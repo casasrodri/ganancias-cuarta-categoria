@@ -1,6 +1,5 @@
-from helpers.bases import tabla, existe_tabla
-
-BASE_PRORRATEOS = 'bases-ganancias-2022/prorrateos.parquet.brotli'
+from helpers.bases import *
+import pandas as pd
 
 class Prorrateos:
     def __init__(self) -> None:
@@ -12,22 +11,23 @@ class Prorrateos:
     def generar_data(self):
       self._records = []
 
-      from data import CWTR
+      from data import CWTR_SUM
       from parametrizacion.conceptos import ParamConceptos
       import numpy as np
 
       conceptos = ParamConceptos()
-      cwtr_a_prorratear = CWTR[CWTR['CC-n.'].isin(conceptos.prorrateables)]
+      cwtr_a_prorratear = CWTR_SUM[CWTR_SUM['CCn'].isin(conceptos.prorrateables)]
 
       for i, row in cwtr_a_prorratear.iterrows():
+          ccn = row['CCn']
           dic = {
-              'legajo':       row['Nº pers.'],
-              'CCn':          row['CC-n.'],
-              'nombre':       row['Texto expl.CC-nómina'],
-              'importe':      row['Importe'],
-              'mes':          row['Mes'],
-              'mes_pago':     row['Mes'],
-              'origen':       'CWTR'
+              'legajo':       row['legajo'],
+              'CCn':          row['CCn'],
+              'nombre':       conceptos[ccn]['descripcion'],
+              'importe':      row['importe'],
+              'mes':          row['mes'],
+              'mes_pago':     row['mes'],
+              'origen':       conceptos[ccn]['origen'],
           }
 
           # Elemento de CWTR
@@ -41,7 +41,7 @@ class Prorrateos:
       del self._records
 
       # Control integridad
-      self.data['control'] = np.where(self.data['origen']=='CWTR', -1, 1) * self.data['importe']
+      self.data['control'] = np.where(self.data['origen']=='cwtr', -1, 1) * self.data['importe']
 
       if round(self.data['control'].sum(), 2) != 0:
           raise ValueError('La suma del total de conceptos prorrateados, no da. Existen problemas de integridad.')
@@ -49,9 +49,9 @@ class Prorrateos:
       self.data.drop('control', axis=1, inplace=True)
 
       # Se guarda la data en un .parquet
-      self.data.to_parquet(BASE_PRORRATEOS, compression='brotli')
+      self.data.to_parquet(ruta_tabla('prorrateos'), compression='brotli')
 
-      return self.data
+      # return self.data
 
     def prorratear(self, dic):
       meses_a_prorratear = 12 - dic['mes'] + 1
@@ -65,7 +65,7 @@ class Prorrateos:
               'importe':      importe_prorrateado,
               'mes':          dic['mes'] + i,
               'mes_pago':     dic['mes'],
-              'origen':       'Calculado',
+              'origen':       'fx',
           })
 
     def filtrar(self, legajo, mes, origen):
