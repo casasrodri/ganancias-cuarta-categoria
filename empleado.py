@@ -1,5 +1,5 @@
 # Importación y carga de la CWTR
-from data import CWTR, DOTACION
+from data import CWTR, CWTR_SUM, DOTACION
 
 class Empleado:
     def __init__(self, legajo) -> None:
@@ -20,15 +20,15 @@ class NominasCWTR:
         return self.importes.get(key, 0)
 
     def cargar_nominas(self):
-        filtro = CWTR['Nº pers.'].eq(self.legajo) & CWTR['Mes'].eq(self.mes)
-        filtrado = CWTR[filtro]
-        filtrado = filtrado[['CC-n.','Importe']]
+        filtro = CWTR_SUM['legajo'].eq(self.legajo) & CWTR['mes'].eq(self.mes)
+        filtrado = CWTR_SUM[filtro]
+        filtrado = filtrado[['CCn','importe']]
 
-        sumarizado = filtrado.groupby('CC-n.').sum()
+        sumarizado = filtrado.groupby('CCn').sum()
 
         self.importes = {}
         for i,row in sumarizado.iterrows():
-            self.importes[i] = round(row['Importe'],2)
+            self.importes[i] = round(row['importe'],2)
 
 class LiquidacionMensualEmpleado:
     def __init__(self, empleado, mes) -> None:

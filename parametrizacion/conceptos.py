@@ -1,6 +1,9 @@
 from helpers.bases import tabla
 
 class ParamConceptos:
+    '''
+    Permite obtener las parametrizaciones definidas para cada concepto.
+    '''
     def __init__(self) -> None:
         self.data = tabla('conceptos')
     
