@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentacion>
+	<periodo>2022</periodo>
+	<nroPresentacion>12</nroPresentacion>
+	<fechaPresentacion>2022-12-02</fechaPresentacion>
+	<empleado>
+		<cuit>20162547292</cuit>
+		<tipoDoc>80</tipoDoc>
+		<apellido>LOPEZ</apellido>
+		<nombre>LUIS ALBERTO</nombre>
+		<direccion>
+			<provincia>3</provincia>
+			<cp>5008</cp>
+			<localidad>CORDOBA CAPITAL</localidad>
+			<calle>DEL PRECURSOR</calle>
+			<nro>4021</nro>
+		</direccion>
+	</empleado>
+	<cargasFamilia>
+		<cargaFamilia>
+			<tipoDoc>86</tipoDoc>
+			<nroDoc>27176289401</nroDoc>
+			<apellido>MINUET MARIA ROSA</apellido>
+			<nombre></nombre>
+			<fechaNac>1965-09-29</fechaNac>
+			<mesDesde>1</mesDesde>
+			<mesHasta>12</mesHasta>
+			<parentesco>1</parentesco>
+			<vigenteProximosPeriodos>S</vigenteProximosPeriodos>
+			<porcentajeDeduccion>100</porcentajeDeduccion>
+		</cargaFamilia>
+	</cargasFamilia>
+	<deducciones>
+		<deduccion tipo="1">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30684708836</nroDoc>
+			<denominacion>SISTEMA DE URGENCIAS DEL ROSAFE S.A.U.</denominacion>
+			<descBasica>30684708836 - SISTEMA DE URGENCIAS DEL ROSAFE S.A.U.</descBasica>
+			<montoTotal>306040</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="4" montoMensual="19870"/>
+				<periodo mesDesde="5" mesHasta="8" montoMensual="25410"/>
+				<periodo mesDesde="9" mesHasta="12" montoMensual="31230"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="2">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30500043594</nroDoc>
+			<denominacion>PRUDENCIA COMPAÑIA ARGENTINA DE SEGUROS GENERALES SA</denominacion>
+			<descBasica>30500043594 - PRUDENCIA COMPAÑIA ARGENTINA DE SEGUROS GENERALES SA</descBasica>
+			<montoTotal>8970</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="3" montoMensual="1254"/>
+				<periodo mesDesde="4" mesHasta="7" montoMensual="1302"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="2">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30500064230</nroDoc>
+			<denominacion>BBVA SEGUROS ARGENTINA S.A.</denominacion>
+			<descBasica>30500064230 - BBVA SEGUROS ARGENTINA S.A.</descBasica>
+			<montoTotal>26700</montoTotal>
+			<periodos>
+				<periodo mesDesde="3" mesHasta="5" montoMensual="3150"/>
+				<periodo mesDesde="6" mesHasta="10" montoMensual="3450"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="3">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30700926245</nroDoc>
+			<denominacion>FUNDACION MANOS ABIERTAS</denominacion>
+			<descBasica>30700926245 - FUNDACION MANOS ABIERTAS</descBasica>
+			<montoTotal>263000</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="1" montoMensual="45000"/>
+				<periodo mesDesde="3" mesHasta="3" montoMensual="50000"/>
+				<periodo mesDesde="5" mesHasta="5" montoMensual="48000"/>
+				<periodo mesDesde="7" mesHasta="7" montoMensual="60000"/>
+				<periodo mesDesde="9" mesHasta="9" montoMensual="60000"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="3">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30708357363</nroDoc>
+			<denominacion>"UN TECHO PARA ARGENTINA ASOCIACION CIVIL"</denominacion>
+			<descBasica>30708357363 - "UN TECHO PARA ARGENTINA ASOCIACION CIVIL"</descBasica>
+			<montoTotal>7000</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="10" montoMensual="700"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="4">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30500001735</nroDoc>
+			<denominacion>BANCO DE GALICIA Y BUENOS AIRES S A U</denominacion>
+			<descBasica>30500001735 - BANCO DE GALICIA Y BUENOS AIRES S A U</descBasica>
+			<montoTotal>20179.96</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="1" montoMensual="1985"/>
+				<periodo mesDesde="2" mesHasta="2" montoMensual="1972"/>
+				<periodo mesDesde="3" mesHasta="3" montoMensual="1954.85"/>
+				<periodo mesDesde="4" mesHasta="4" montoMensual="1902.36"/>
+				<periodo mesDesde="5" mesHasta="5" montoMensual="1895.41"/>
+				<periodo mesDesde="6" mesHasta="6" montoMensual="1890"/>
+				<periodo mesDesde="7" mesHasta="7" montoMensual="1750"/>
+				<periodo mesDesde="8" mesHasta="8" montoMensual="1700"/>
+				<periodo mesDesde="9" mesHasta="9" montoMensual="1650"/>
+				<periodo mesDesde="10" mesHasta="10" montoMensual="1630"/>
+				<periodo mesDesde="11" mesHasta="11" montoMensual="1850.34"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="21">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30526874249</nroDoc>
+			<denominacion>FRAVEGA S A C I E I</denominacion>
+			<descBasica>30526874249 - FRAVEGA S A C I E I</descBasica>
+			<montoTotal>180000</montoTotal>
+			<periodos>
+				<periodo mesDesde="5" mesHasta="5" montoMensual="180000.00"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="23">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30663205931</nroDoc>
+			<denominacion>CAJA DE AHORRO Y SEGURO SA</denominacion>
+			<descBasica>30663205931 - CAJA DE AHORRO Y SEGURO SA</descBasica>
+			<montoTotal>25000</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="5" montoMensual="5000"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="24">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30698953752</nroDoc>
+			<denominacion>PRUDENTIAL  SEGUROS  S A</denominacion>
+			<descBasica>30698953752 - PRUDENTIAL  SEGUROS  S A</descBasica>
+			<montoTotal>24180</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="3" montoMensual="8060"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Enero - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>25890</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="1"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Febrero - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>25890</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="2"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Marzo - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>31230</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="3"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Abril - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>31230</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="4"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Mayo - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>35420</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="5"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Junio - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>40560</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="6"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Julio - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>40560</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="7"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Agosto - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>40560</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="8"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Septiembre - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>47560</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="9"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Octubre - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>47560</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="10"/>
+			</detalles>
+		</deduccion>
+		<deduccion tipo="99">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30999012880</nroDoc>
+			<denominacion>CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</denominacion>
+			<descBasica>Cajas Provinciales o Municipales o de Previsión para Profesionales</descBasica>
+			<descAdicional>Noviembre - 30999012880 - CAJA DE JUBILACIONES  PENSIONES Y RETIROS DE CORDOBA</descAdicional>
+			<montoTotal>52120</montoTotal>
+			<detalles>
+				<detalle nombre="motivo" valor="2"/>
+				<detalle nombre="mes" valor="11"/>
+			</detalles>
+		</deduccion>
+	</deducciones>
+</presentacion>
