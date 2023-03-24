@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentacion>
+	<periodo>2021</periodo>
+	<nroPresentacion>5</nroPresentacion>
+	<fechaPresentacion>2022-02-15</fechaPresentacion>
+	<empleado>
+		<cuit>20179329973</cuit>
+		<tipoDoc>86</tipoDoc>
+		<apellido>GORNATI ARIEL HERNAN</apellido>
+		<nombre></nombre>
+		<direccion>
+			<provincia>12</provincia>
+			<cp>3000</cp>
+			<localidad>SANTA FE</localidad>
+			<calle>LUCIANO MOLINAS</calle>
+			<nro>3840</nro>
+		</direccion>
+	</empleado>
+	<deducciones>
+		<deduccion tipo="1">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30682737650</nroDoc>
+			<denominacion>MEDIFE ASOCIACION CIVIL</denominacion>
+			<descBasica>30682737650 - MEDIFE ASOCIACION CIVIL</descBasica>
+			<montoTotal>45749.7</montoTotal>
+			<periodos>
+				<periodo mesDesde="12" mesHasta="12" montoMensual="45749.7"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="2">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30500064230</nroDoc>
+			<denominacion>BBVA SEGUROS ARGENTINA S.A.</denominacion>
+			<descBasica>30500064230 - BBVA SEGUROS ARGENTINA S.A.</descBasica>
+			<montoTotal>2094.34</montoTotal>
+			<periodos>
+				<periodo mesDesde="11" mesHasta="12" montoMensual="1047.17"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="2">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30698953752</nroDoc>
+			<denominacion>PRUDENTIAL  SEGUROS  S A</denominacion>
+			<descBasica>30698953752 - PRUDENTIAL  SEGUROS  S A</descBasica>
+			<montoTotal>31746.4</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="10" montoMensual="3174.64"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="3">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30562113289</nroDoc>
+			<denominacion>CENTRO DE INTEGRACION LIBRE Y SOLIDARIO DE ARGENTINA ( C I L S A )</denominacion>
+			<descBasica>30562113289 - CENTRO DE INTEGRACION LIBRE Y SOLIDARIO DE ARGENTINA ( C I L S A )</descBasica>
+			<montoTotal>4680</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="4" montoMensual="350"/>
+				<periodo mesDesde="5" mesHasta="8" montoMensual="390"/>
+				<periodo mesDesde="9" mesHasta="12" montoMensual="430"/>
+			</periodos>
+		</deduccion>
+	</deducciones>
+	<retPerPagos>
+		<retPerPago tipo="6">
+			<descBasica>CBU ******************3416</descBasica>
+			<montoTotal>8669.7</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="1" montoMensual="933"/>
+				<periodo mesDesde="2" mesHasta="2" montoMensual="815.5"/>
+				<periodo mesDesde="3" mesHasta="3" montoMensual="1063.2"/>
+				<periodo mesDesde="4" mesHasta="4" montoMensual="888"/>
+				<periodo mesDesde="5" mesHasta="5" montoMensual="1013"/>
+				<periodo mesDesde="6" mesHasta="6" montoMensual="1163"/>
+				<periodo mesDesde="7" mesHasta="7" montoMensual="1044"/>
+				<periodo mesDesde="8" mesHasta="8" montoMensual="250"/>
+				<periodo mesDesde="9" mesHasta="10" montoMensual="600"/>
+				<periodo mesDesde="12" mesHasta="12" montoMensual="300"/>
+			</periodos>
+			<detalles>
+				<detalle nombre="cbu" valor="******************3416"/>
+			</detalles>
+		</retPerPago>
+		<retPerPago tipo="27">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30500001735</nroDoc>
+			<denominacion>BANCO DE GALICIA Y BUENOS AIRES S A U</denominacion>
+			<descBasica>30500001735 - BANCO DE GALICIA Y BUENOS AIRES S A U</descBasica>
+			<montoTotal>35094.5</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="1" montoMensual="6496"/>
+				<periodo mesDesde="2" mesHasta="2" montoMensual="6538"/>
+				<periodo mesDesde="9" mesHasta="9" montoMensual="7301"/>
+				<periodo mesDesde="10" mesHasta="10" montoMensual="7371"/>
+				<periodo mesDesde="11" mesHasta="11" montoMensual="7388.5"/>
+			</periodos>
+		</retPerPago>
+	</retPerPagos>
+</presentacion>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentacion>
+	<periodo>2021</periodo>
+	<nroPresentacion>10</nroPresentacion>
+	<fechaPresentacion>2022-03-03</fechaPresentacion>
+	<empleado>
+		<cuit>23278673804</cuit>
+		<tipoDoc>80</tipoDoc>
+		<apellido>DEMARCO</apellido>
+		<nombre>VALERIA CARLA</nombre>
+		<direccion>
+			<provincia>3</provincia>
+			<cp>5009</cp>
+			<localidad>BARRIO ALEJANDRO CENTENO      *</localidad>
+			<calle>MARTIN FIERRO</calle>
+			<nro>4359</nro>
+		</direccion>
+	</empleado>
+	<cargasFamilia>
+		<cargaFamilia>
+			<tipoDoc>86</tipoDoc>
+			<nroDoc>20535101508</nroDoc>
+			<apellido>LAZCANO FACUNDO</apellido>
+			<nombre></nombre>
+			<fechaNac>2014-01-14</fechaNac>
+			<mesDesde>1</mesDesde>
+			<mesHasta>12</mesHasta>
+			<parentesco>3</parentesco>
+			<vigenteProximosPeriodos>S</vigenteProximosPeriodos>
+			<porcentajeDeduccion>100</porcentajeDeduccion>
+		</cargaFamilia>
+		<cargaFamilia>
+			<tipoDoc>86</tipoDoc>
+			<nroDoc>20562456644</nroDoc>
+			<apellido>LAZCANO</apellido>
+			<nombre>RENZO</nombre>
+			<fechaNac>2017-06-29</fechaNac>
+			<mesDesde>1</mesDesde>
+			<mesHasta>12</mesHasta>
+			<parentesco>3</parentesco>
+			<vigenteProximosPeriodos>S</vigenteProximosPeriodos>
+			<porcentajeDeduccion>100</porcentajeDeduccion>
+		</cargaFamilia>
+	</cargasFamilia>
+	<deducciones>
+		<deduccion tipo="1">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30546741253</nroDoc>
+			<denominacion>OSDE ORGANIZACION DE SERVICIOS DIRECTOS EMPRESARIOS</denominacion>
+			<descBasica>30546741253 - OSDE ORGANIZACION DE SERVICIOS DIRECTOS EMPRESARIOS</descBasica>
+			<montoTotal>106249.46</montoTotal>
+			<periodos>
+				<periodo mesDesde="12" mesHasta="12" montoMensual="106249.46"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="2">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30500064230</nroDoc>
+			<denominacion>BBVA SEGUROS ARGENTINA S.A.</denominacion>
+			<descBasica>30500064230 - BBVA SEGUROS ARGENTINA S.A.</descBasica>
+			<montoTotal>2882.32</montoTotal>
+			<periodos>
+				<periodo mesDesde="12" mesHasta="12" montoMensual="2882.32"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="2">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30698953752</nroDoc>
+			<denominacion>PRUDENTIAL  SEGUROS  S A</denominacion>
+			<descBasica>30698953752 - PRUDENTIAL  SEGUROS  S A</descBasica>
+			<montoTotal>8865.9</montoTotal>
+			<periodos>
+				<periodo mesDesde="9" mesHasta="9" montoMensual="8865.9"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="7">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>27122445467</nroDoc>
+			<denominacion>DEMO MARIA ALBA</denominacion>
+			<descBasica>27122445467 - DEMO MARIA ALBA</descBasica>
+			<montoTotal>4000</montoTotal>
+			<periodos>
+				<periodo mesDesde="7" mesHasta="7" montoMensual="4000.00"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="7">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>27284255394</nroDoc>
+			<denominacion>MARTINEZ LORENA YANINA</denominacion>
+			<descBasica>27284255394 - MARTINEZ LORENA YANINA</descBasica>
+			<montoTotal>4236</montoTotal>
+			<periodos>
+				<periodo mesDesde="3" mesHasta="3" montoMensual="1980.00"/>
+				<periodo mesDesde="7" mesHasta="7" montoMensual="2256.00"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="7">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30708404981</nroDoc>
+			<denominacion>MATERCELL SOCIEDAD ANONIMA</denominacion>
+			<descBasica>30708404981 - MATERCELL SOCIEDAD ANONIMA</descBasica>
+			<montoTotal>10096</montoTotal>
+			<periodos>
+				<periodo mesDesde="2" mesHasta="2" montoMensual="4696.00"/>
+				<periodo mesDesde="7" mesHasta="7" montoMensual="5400.00"/>
+			</periodos>
+		</deduccion>
+		<deduccion tipo="8">
+			<tipoDoc>86</tipoDoc>
+			<nroDoc>27297115818</nroDoc>
+			<denominacion>SANCHEZ MARIELA GUADALUPE</denominacion>
+			<descBasica>27297115818 - SANCHEZ MARIELA GUADALUPE</descBasica>
+			<montoTotal>191000</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="1" montoMensual="33000"/>
+				<periodo mesDesde="2" mesHasta="3" montoMensual="23000"/>
+				<periodo mesDesde="4" mesHasta="4" montoMensual="25000"/>
+				<periodo mesDesde="5" mesHasta="5" montoMensual="23000"/>
+				<periodo mesDesde="6" mesHasta="6" montoMensual="25000"/>
+				<periodo mesDesde="7" mesHasta="7" montoMensual="39000"/>
+			</periodos>
+		</deduccion>
+	</deducciones>
+	<retPerPagos>
+		<retPerPago tipo="27">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30500001735</nroDoc>
+			<denominacion>BANCO DE GALICIA Y BUENOS AIRES S A U</denominacion>
+			<descBasica>30500001735 - BANCO DE GALICIA Y BUENOS AIRES S A U</descBasica>
+			<montoTotal>33659.5</montoTotal>
+			<periodos>
+				<periodo mesDesde="1" mesHasta="1" montoMensual="6356"/>
+				<periodo mesDesde="7" mesHasta="7" montoMensual="7098"/>
+				<periodo mesDesde="9" mesHasta="9" montoMensual="5428.5"/>
+				<periodo mesDesde="10" mesHasta="10" montoMensual="7371"/>
+				<periodo mesDesde="11" mesHasta="11" montoMensual="7406"/>
+			</periodos>
+		</retPerPago>
+		<retPerPago tipo="28">
+			<tipoDoc>80</tipoDoc>
+			<nroDoc>30500001735</nroDoc>
+			<denominacion>BANCO DE GALICIA Y BUENOS AIRES S A U</denominacion>
+			<descBasica>30500001735 - BANCO DE GALICIA Y BUENOS AIRES S A U</descBasica>
+			<montoTotal>1360.81</montoTotal>
+			<periodos>
+				<periodo mesDesde="8" mesHasta="8" montoMensual="1360.81"/>
+			</periodos>
+			<detalles>
+				<detalle nombre="tipoTarjeta" valor="0"/>
+			</detalles>
+		</retPerPago>
+	</retPerPagos>
+</presentacion>
