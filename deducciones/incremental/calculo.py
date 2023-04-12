@@ -11,6 +11,7 @@ df = CWTR_SUM.copy()
 # Se agregan valores vacíos
 df_vacio = []
 
+# crea un df vacio para que ningun legajo quede sin valor en algun mes, por defecto le va poner cero
 for empleado in DOTACION['legajo'].tolist():
     for mes in range(1,13):
         df_vacio.append({
@@ -21,6 +22,7 @@ for empleado in DOTACION['legajo'].tolist():
         })
 
 df_vacio = pd.DataFrame.from_records(df_vacio)
+
 
 df = pd.concat([df_vacio, CWTR_SUM])
 
@@ -48,6 +50,9 @@ class DeduccionEspecial:
 
     @staticmethod
     def norma_aplicable(mes):
+        '''
+        Recibe por parametro un mes y devuelve un diccionario con información del tramo aplicable
+        '''
         for norma in AFIP_DEDUC_INCREM:
             if norma['ini'] <= mes <= norma['fin']:
                 return norma
@@ -73,7 +78,7 @@ class DeduccionEspecial:
 
     @staticmethod
     def obtener_base_para_tramos(empleado, mes, norma):
-        legajo = empleado.legajo
+        legajo = int(empleado.legajo)
 
         # Se filtra la remuneración del mes:
         rem_bruta_mes = DeduccionEspecial.obtener_rem_mes(legajo, mes)

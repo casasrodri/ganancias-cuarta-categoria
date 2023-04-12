@@ -54,8 +54,8 @@ class Prorrateos:
       # return self.data
 
     def prorratear(self, dic):
-      meses_a_prorratear = 12 - dic['mes'] + 1
-      importe_prorrateado = dic['importe'] / meses_a_prorratear
+      meses_a_prorratear = 12 - dic['mes'] + 1 #12 menos el mes en el que estoy + 1 (11 para el bav por ejemplo)
+      importe_prorrateado = dic['importe'] / meses_a_prorratear # defino el importe que voy a prorratear por mes
 
       for i in range(0, meses_a_prorratear):
           self._records.append({
@@ -74,5 +74,12 @@ class Prorrateos:
                 df['mes'].eq(mes) & \
                 df['origen'].str.upper().eq(origen.upper())
 
+      out = df[filtro].reset_index()
+      return out
+
+    def prorrateados(self):
+      df = self.data
+      filtro = df['origen'].eq("fx")  
+                    
       out = df[filtro].reset_index()
       return out
