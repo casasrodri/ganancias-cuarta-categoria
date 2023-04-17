@@ -62,7 +62,7 @@ class DeduccionEspecial:
         filtro =    BASES_DEDUC_INCREM['legajo'].eq(legajo) & \
                     BASES_DEDUC_INCREM['mes'].eq(mes)
         return BASES_DEDUC_INCREM[filtro].iloc[0].at['BaseTramos']
-    
+
     @staticmethod
     def obtener_promedio_rem(legajo, mes, norma):
         filt_min = min(norma['ini'], mes)
@@ -75,18 +75,18 @@ class DeduccionEspecial:
         promediado = filtrado_fechas.groupby(['legajo'])['BaseTramos'].mean().reset_index()
         valor = promediado[promediado['legajo'].eq(legajo)].iloc[0].at['BaseTramos']
         return round(valor, 2)
-    
+
     @staticmethod
     def obtener_promedio_rem_df(legajo, mes, norma, df):
         filt_min = min(norma['ini'], mes)
         filt_max = min(norma['fin'], mes)
 
-        filtro_periodos =   df['Mes'].ge(filt_min) & \
-                            df['Mes'].le(filt_max)
+        filtro_periodos =   df['mes'].ge(filt_min) & \
+                            df['mes'].le(filt_max)
 
         filtrado_fechas = df[filtro_periodos]
-        promediado = filtrado_fechas.groupby(['legajo'])['Importe'].mean().reset_index()
-        valor = promediado[promediado['legajo'].eq(legajo)].iloc[0].at['Importe']
+        promediado = filtrado_fechas.groupby(['legajo'])['importe'].mean().reset_index()
+        valor = promediado[promediado['legajo'].eq(legajo)].iloc[0].at['importe']
         return round(valor, 2)
 
     @staticmethod
@@ -106,7 +106,7 @@ class DeduccionEspecial:
     def obtener_tramo(base_tramo, mes):
         # Se determina la norma aplicable
         norma = DeduccionEspecial.norma_aplicable(mes)
-    
+
         # Determinación tramo:
         if base_tramo <= norma['tope1']:
             tramo = 1
@@ -114,5 +114,5 @@ class DeduccionEspecial:
             tramo = 2
         else:
             tramo = 3
-        
+
         return tramo
