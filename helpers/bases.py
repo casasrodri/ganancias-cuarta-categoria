@@ -1,4 +1,5 @@
 import pandas as pd
+
 def tabla(nombre):
     return pd.read_parquet(ruta_tabla(nombre))
 
